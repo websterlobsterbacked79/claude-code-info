@@ -2,6 +2,7 @@
   "name": "claude-files-info",
   "version": "0.1.0",
   "private": true,
+  "description": "Browse leaked Claude Code claude/src — per-file docs, summaries, highlighted previews (Next.js).",
   "scripts": {
     "docs:manifest": "node scripts/build-claude-src-manifest.mjs",
     "dev": "next dev",

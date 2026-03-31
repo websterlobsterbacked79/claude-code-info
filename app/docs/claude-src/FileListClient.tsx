@@ -34,7 +34,7 @@ export function FileListClient({
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="e.g. bridge/sessionRunner"
-            className="border-2 border-black bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-black"
+            className="border-2 border-black bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-black dark:border-white dark:bg-neutral-950 dark:text-neutral-100 dark:focus:ring-white"
           />
         </label>
         <label className="flex min-w-[180px] flex-col gap-1 text-xs font-semibold uppercase tracking-wider">
@@ -42,7 +42,7 @@ export function FileListClient({
           <select
             value={folder}
             onChange={(e) => setFolder(e.target.value as typeof folder)}
-            className="border-2 border-black bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-black"
+            className="border-2 border-black bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-black dark:border-white dark:bg-neutral-950 dark:text-neutral-100 dark:focus:ring-white"
           >
             <option value="all">All ({rows.length})</option>
             {folders.map((f) => (
@@ -57,7 +57,7 @@ export function FileListClient({
         </p>
       </div>
 
-      <ul className="grid gap-0 border-2 border-black divide-y-2 divide-black max-h-[70vh] overflow-y-auto">
+      <ul className="grid max-h-[70vh] gap-0 divide-y-2 divide-black overflow-y-auto border-2 border-black dark:divide-white dark:border-white">
         {filtered.map((r) => (
           <li key={r.path}>
             <Link
@@ -66,7 +66,7 @@ export function FileListClient({
                 .split("/")
                 .map((seg) => encodeURIComponent(seg))
                 .join("/")}`}
-              className="flex flex-wrap items-baseline justify-between gap-2 px-3 py-2 hover:bg-black hover:text-white"
+              className="flex flex-wrap items-baseline justify-between gap-2 px-3 py-2 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
             >
               <span className="break-all">{r.path}</span>
               <span className="shrink-0 text-xs opacity-80">

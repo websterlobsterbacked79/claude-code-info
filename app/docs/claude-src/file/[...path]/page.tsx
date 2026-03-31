@@ -51,7 +51,7 @@ export default async function ClaudeSrcFilePage({ params }: Props) {
       : null;
 
   return (
-    <article className="space-y-8">
+    <article className="text-foreground space-y-8">
       <div className="space-y-2">
         <p className="text-xs font-semibold uppercase tracking-[0.2em]">📄 File detail</p>
         <h1 className="break-all text-2xl font-bold leading-tight">{meta.path}</h1>
@@ -72,7 +72,7 @@ export default async function ClaudeSrcFilePage({ params }: Props) {
         </Link>
       </div>
 
-      <section className="space-y-2 border-2 border-black p-4">
+      <section className="space-y-2 border-2 border-black p-4 dark:border-white">
         <h2 className="text-sm font-semibold uppercase tracking-wider">🎯 Use case</h2>
         <p className="text-sm leading-relaxed">{meta.useCase || "—"}</p>
         <p className="text-xs opacity-75">
@@ -80,17 +80,17 @@ export default async function ClaudeSrcFilePage({ params }: Props) {
         </p>
       </section>
 
-      <section className="space-y-2 border-2 border-black p-4">
+      <section className="space-y-2 border-2 border-black p-4 dark:border-white">
         <h2 className="text-sm font-semibold uppercase tracking-wider">🧠 Inline summary</h2>
         <p className="whitespace-pre-wrap text-sm leading-relaxed">{meta.summary || "—"}</p>
       </section>
 
       {meta.exports.length > 0 && (
-        <section className="space-y-2 border-2 border-black p-4">
+        <section className="space-y-2 border-2 border-black p-4 dark:border-white">
           <h2 className="text-sm font-semibold uppercase tracking-wider">📤 Exports (heuristic)</h2>
           <ul className="flex flex-wrap gap-2 text-sm">
             {meta.exports.map((name) => (
-              <li key={name} className="border border-black px-2 py-0.5">
+              <li key={name} className="border border-black px-2 py-0.5 dark:border-white">
                 <code>{name}</code>
               </li>
             ))}
@@ -99,12 +99,12 @@ export default async function ClaudeSrcFilePage({ params }: Props) {
       )}
 
       {meta.importRoots.length > 0 && (
-        <section className="space-y-2 border-2 border-black p-4">
+        <section className="space-y-2 border-2 border-black p-4 dark:border-white">
           <h2 className="text-sm font-semibold uppercase tracking-wider">📚 External import roots</h2>
           <p className="text-xs opacity-80">Package roots from <code>from &quot;…&quot;</code> (relative paths omitted).</p>
           <ul className="flex flex-wrap gap-2 text-sm">
             {meta.importRoots.map((p) => (
-              <li key={p} className="border border-black px-2 py-0.5">
+              <li key={p} className="border border-black px-2 py-0.5 dark:border-white">
                 <code>{p}</code>
               </li>
             ))}
@@ -132,7 +132,7 @@ export default async function ClaudeSrcFilePage({ params }: Props) {
             )}
             {highlighted && (
               <div
-                className="doc-shiki max-h-[min(70vh,900px)] overflow-auto border-2 border-black text-xs leading-snug"
+                className="doc-shiki max-h-[min(70vh,900px)] overflow-auto border-2 border-black text-xs leading-snug dark:border-white"
                 dangerouslySetInnerHTML={{ __html: highlighted.html }}
               />
             )}

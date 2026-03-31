@@ -23,13 +23,13 @@ const githubHref =
 
 export default function Home() {
   return (
-    <div className="flex min-h-full flex-col bg-white text-black">
+    <div className="flex min-h-full flex-col bg-white text-black dark:bg-background dark:text-foreground">
       <main className="relative mx-auto flex max-w-lg flex-1 flex-col justify-center gap-8 px-6 py-24">
         <a
           href={githubHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute right-6 top-6 inline-flex h-11 w-11 items-center justify-center border-2 border-black text-black transition-colors hover:bg-black hover:text-white"
+          className="absolute right-6 top-6 inline-flex h-11 w-11 items-center justify-center border-2 border-black text-black transition-colors hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
           aria-label="View on GitHub"
         >
           <GitHubIcon className="h-6 w-6" />
@@ -39,14 +39,14 @@ export default function Home() {
           <p className="text-xs font-semibold uppercase tracking-[0.25em]">Welcome</p>
           <h1 className="text-3xl font-bold leading-tight">Claude files info</h1>
           <p className="text-sm leading-relaxed">
-            Browse generated documentation for every file under{" "}
-            <code className="font-semibold">claude/src</code> — summaries, exports, dependencies, and
-            live source previews in a black-and-white, Source Code Pro layout.
+            <strong>Leaked Claude Code</strong> source tree, documented: every file under{" "}
+            <code className="font-semibold">claude/src</code> with generated summaries, exports,
+            dependency hints, and syntax-highlighted source previews — Source Code Pro, light or dark.
           </p>
         </div>
         <Link
           href="/docs/claude-src"
-          className="inline-flex w-fit items-center gap-2 border-4 border-black bg-black px-6 py-3 text-sm font-semibold text-white hover:bg-white hover:text-black"
+          className="inline-flex w-fit items-center gap-2 border-4 border-black bg-black px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-black dark:border-white dark:bg-white dark:text-black dark:hover:bg-transparent dark:hover:text-white"
         >
           📖 Open the explorer
         </Link>
