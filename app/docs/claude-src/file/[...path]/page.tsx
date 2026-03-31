@@ -17,6 +17,17 @@ function entryForPath(files: ClaudeSrcFileEntry[], posix: string): ClaudeSrcFile
   return files.find((f) => f.path === posix);
 }
 
+/** Pre-render every manifest path at build → CDN static HTML, minimal runtime function invocations */
+export async function generateStaticParams(): Promise<{ path: string[] }[]> {
+  const manifest = await loadManifest();
+  return manifest.files.map((f) => ({
+    path: f.path.split("/").filter(Boolean),
+  }));
+}
+
+/** Only paths from generateStaticParams exist; unknown paths 404 without executing the page handler */
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { path: segments } = await params;
   if (!segments?.length) return { title: "File — claude/src" };

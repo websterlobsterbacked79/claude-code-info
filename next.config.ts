@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    /** Faster SSG when pre-rendering thousands of /docs/claude-src/file/* pages */
+    staticGenerationMaxConcurrency: 8,
+    staticGenerationMinPagesPerWorker: 50,
+  },
 };
 
 export default nextConfig;
