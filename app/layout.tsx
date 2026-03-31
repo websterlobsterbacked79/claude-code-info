@@ -20,8 +20,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${sourceCodePro.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col [font-family:var(--font-source-code-pro),ui-monospace,monospace]">
-        {children}
+      <body className="flex min-h-full flex-col [font-family:var(--font-source-code-pro),ui-monospace,monospace]">
+        <div className="flex flex-1 flex-col">{children}</div>
+        <footer className="border-t-2 border-black py-4 text-center text-sm">
+          Built by{" "}
+          <a
+            href="https://x.com/21prnv"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold underline hover:no-underline"
+          >
+            prnv
+          </a>
+        </footer>
       </body>
     </html>
   );
