@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "docs:manifest": "node scripts/build-claude-src-manifest.mjs",
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run docs:manifest && next build",
     "start": "next start",
     "lint": "eslint"
   },
