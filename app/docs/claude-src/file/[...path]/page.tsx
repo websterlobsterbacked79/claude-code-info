@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { highlightSource } from "@/lib/highlightCode";
 import {
   loadManifest,
   readSrcPreview,
@@ -43,6 +44,11 @@ export default async function ClaudeSrcFilePage({ params }: Props) {
       preview = null;
     }
   }
+
+  const highlighted =
+    preview && meta.isText
+      ? await highlightSource(preview.content, meta.ext || ".txt")
+      : null;
 
   return (
     <article className="space-y-8">
@@ -119,9 +125,17 @@ export default async function ClaudeSrcFilePage({ params }: Props) {
                 ⚠️ Preview truncated to ~400KB. Open the file locally for the full content.
               </p>
             )}
-            <pre className="max-h-[min(70vh,900px)] overflow-auto border-2 border-black bg-black p-4 text-xs leading-snug text-white whitespace-pre">
-              {preview.content}
-            </pre>
+            {highlighted?.highlightTruncated && (
+              <p className="text-xs">
+                ⚠️ Syntax highlighting applies to the first ~150k characters only (performance); the raw preview above may be longer.
+              </p>
+            )}
+            {highlighted && (
+              <div
+                className="doc-shiki max-h-[min(70vh,900px)] overflow-auto border-2 border-black text-xs leading-snug"
+                dangerouslySetInnerHTML={{ __html: highlighted.html }}
+              />
+            )}
           </>
         )}
       </section>
